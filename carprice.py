@@ -24,8 +24,16 @@ y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
 
+# Print the coefficients of the features
+print("\nFeature Coefficients:")
+for feature, coef in zip(X.columns, model.coef_):
+    print(f"{feature}: {coef:.2f}")
+
+# Print the intercept
+print(f"\nIntercept: {model.intercept_:.2f}")
+
 # Get input from the user
-print("Please enter the following details for the car:")
+print("\nPlease enter the following details for the car:")
 length = float(input("Length: "))
 width = float(input("Width: "))
 height = float(input("Height: "))
@@ -41,7 +49,7 @@ input_data = pd.DataFrame([[length, width, height, engine_size, horsepower, city
 predicted_price = model.predict(input_data)
 
 # Print the result
-print(f"Predicted price for the car: ${predicted_price[0]:.2f}")
+print(f"\nPredicted price for the car: ${predicted_price[0]:,.2f}")
 
 # Write the results to a file
 with open('car_price_predictions.txt', 'a') as f:
