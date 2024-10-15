@@ -4,7 +4,7 @@ This project implements a multi linear regression model to predict car prices ba
 
 ## Project Description
 
-The script `car_price_prediction.py` uses a linear regression model to:
+The script `carprice.py` uses a linear regression model to:
 1. Load and preprocess car data
 2. Train a model on the relationship between car features and prices
 3. Evaluate the model's performance
