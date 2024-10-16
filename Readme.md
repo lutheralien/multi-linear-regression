@@ -34,7 +34,7 @@ To set up the Multi Linear Regression project, follow these steps:
 
 3. Install the required packages:
    ```
-   pip install pandas scikit-learn
+   pip install -r requirements.txt
    ```
 
 ## Usage
